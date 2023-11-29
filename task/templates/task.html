@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'nav.html' %}
+
+
+    {% block contain %}
+    <main class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center display-3 py-5">Task, bitch</h1>
+                <ul class="list-group">
+                    {% for task in tasks %}
+                    <li class="list-group-item">
+                        <a class="text-decoration-none" href="{% url 'task_detail' task.id %}">
+                            <header class="d-flex justify-content-between">
+                                {% if task.important %}
+                                <h1 class="fw-bold text-success"> {{task.title}} </h1>
+                                <p>{{task.user.username}}</p>
+                                {% else %}
+                                <h1 class="fw-bold"> {{task.title}} </h1>
+                                <p>{{task.user.username}}</p>
+                                {% endif %}
+                            </header>
+                        </a>
+                        {% if task.datecomplete == None %}
+                        <h3>{{task.description}}</h3>
+                        {% else %}
+                        <h3>{{task.description}}</h3>
+                        <p>{{task.datecomplete}}</p>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+    {% endblock %}
+</body>
+</html>

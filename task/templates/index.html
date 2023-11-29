@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'nav.html' %}
+
+    {% block contain %}
+    <main class="container py-5">
+        <section class="card card-body">
+            <h1 class="display-1 text-center">Hello!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident nostrum optio nihil tempora perferendis, odit labore officiis dolorum sit earum doloribus quidem repudiandae officia cum ducimus fuga blanditiis saepe expedita. Blanditiis, omnis eius. Placeat debitis aspernatur a dolores officiis totam provident atque sed assumenda quia quisquam voluptatum quidem architecto aut velit blanditiis nam error harum aliquid odit, distinctio deserunt! Odio perspiciatis odit animi dolorem dicta, eaque velit ab sed ut repudiandae, quisquam perferendis aut accusamus nisi necessitatibus? Ad fugiat qui dicta deleniti dolores! Harum maxime eius facilis! Velit, adipisci modi quas explicabo doloremque sequi doloribus voluptate quos quis in mollitia!</p>
+
+            <div class="text-center">
+                <a class="btn btn-primary" href="/signin/">Signin</a>
+                <a class="btn btn-secondary" href="/signup/">Signup</a>
+            </div>
+        </section>
+    </main>
+    {% endblock %}
+</body>
+</html>
